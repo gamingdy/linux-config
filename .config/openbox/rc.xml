@@ -326,7 +326,7 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="W-S-c">
+    <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -401,29 +401,13 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Geany</name>
-        </startupnotify>
-        <command>geany</command>
-      </action>
-    </keybind>
-    <keybind key="W-f">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
           <name>pcmanfm</name>
         </startupnotify>
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <keybind key="W-b">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>firefox</name>
-        </startupnotify>
-        <command>firefox-esr</command>
-      </action>
-    </keybind>
+    
+    
     <keybind key="W-space">
       <action name="Execute">
         <command>rofi -modi drun -show drun -line padding 4 -hide-scrollbar -show-icons</command>
@@ -431,7 +415,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>terminator</command>
+        <command>yakuake</command>
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
