@@ -62,6 +62,9 @@ sudo systemctl enable lxdm
 # Text editor
 sudo apt install -y geany vim
 
+# Calendar
+sudo apt install -y gsimplecal
+
 # Configuration Setup
 mkdir -p ~/.config/openbox
 cp -a /etc/xdg/openbox/ ~/.config/
