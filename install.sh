@@ -59,6 +59,9 @@ sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage
 sudo apt install -y lxdm
 sudo systemctl enable lxdm
 
+# Text editor
+sudo apt install -y geany vim
+
 # Configuration Setup
 mkdir -p ~/.config/openbox
 cp -a /etc/xdg/openbox/ ~/.config/
