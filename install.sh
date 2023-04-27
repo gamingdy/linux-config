@@ -45,7 +45,8 @@ sudo apt install -y firefox-esr
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
 # sudo apt install -y nitrogen 
-sudo apt install -y feh
+sudo apt install -y nitrogen 
+#sudo apt install -y feh
  
 # Fonts and icons for now
 sudo apt install -y fonts-firacode fonts-liberation2 fonts-ubuntu papirus-icon-theme fonts-cascadia-code
