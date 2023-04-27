@@ -41,6 +41,11 @@ sudo apt install -y lxappearance
 
 # Browser Installation (eg. chromium)
 sudo apt install -y firefox-esr 
+# if you want firefox
+# sudo apt install -y firefox-esr 
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./google-chrome-stable_current_amd64.deb
+sudo rm ./google-chrome-stable_current_amd64.deb
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
