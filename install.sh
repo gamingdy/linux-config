@@ -31,6 +31,7 @@ sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/HTOP
 sudo apt install -y neofetch htop
+sudo apt install -y neofetch bpytop
 
 # Network Manager
 sudo apt install -y network-manager network-manager-gnome 
