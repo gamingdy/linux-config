@@ -86,6 +86,12 @@ cp wallpapers/* ~/wallpapers
 sudo cp -r deb-theme/ /usr/share/lxdm/themes
 sudo cp lxdm.conf /etc/lxdm/lxdm.conf
 
+# Theme
+sudo apt install -y xz-utils
+cd .themes/
+tar --xz -xf Nordic-darker.tar.xz
+rm Nordic-darker.tar.xz
+cp -r . ~/.themes
 ########################################################
 # End of script for default config
 #
