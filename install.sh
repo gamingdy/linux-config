@@ -82,6 +82,10 @@ cp -rv .config/* ~/.config
 mkdir -p ~/wallpapers
 cp wallpapers/* ~/wallpapers
 
+# lXDM Theme
+sudo cp -r deb-theme/ /usr/share/lxdm/themes
+sudo cp lxdm.conf /etc/lxdm/lxdm.conf
+
 ########################################################
 # End of script for default config
 #
