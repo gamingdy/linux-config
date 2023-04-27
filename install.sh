@@ -68,6 +68,9 @@ sudo apt install -y gsimplecal
 # archiver
 sudo apt install -y xarchiver
 
+# pip
+sudo apt install -y python3-pip
+
 # Configuration Setup
 mkdir -p ~/.config/openbox
 cp -a /etc/xdg/openbox/ ~/.config/
