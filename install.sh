@@ -73,7 +73,10 @@ sudo apt install -y python3-pip
 
 # Configuration Setup
 mkdir -p ~/.config/openbox
-cp -a /etc/xdg/openbox/ ~/.config/
+mkdir -p ~/.config
+cp -rv .config/* ~/.config
+#mkdir -p ~/.config/openbox
+#cp -a /etc/xdg/openbox/ ~/.config/
 
 ########################################################
 # End of script for default config
