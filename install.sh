@@ -78,6 +78,10 @@ cp -rv .config/* ~/.config
 #mkdir -p ~/.config/openbox
 #cp -a /etc/xdg/openbox/ ~/.config/
 
+# Wallpaper
+mkdir -p ~/wallpapers
+cp wallpapers/* ~/wallpapers
+
 ########################################################
 # End of script for default config
 #
