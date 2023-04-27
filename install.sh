@@ -65,6 +65,9 @@ sudo apt install -y geany vim
 # Calendar
 sudo apt install -y gsimplecal
 
+# archiver
+sudo apt install -y xarchiver
+
 # Configuration Setup
 mkdir -p ~/.config/openbox
 cp -a /etc/xdg/openbox/ ~/.config/
