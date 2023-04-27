@@ -50,6 +50,7 @@ sudo apt install -y nitrogen
  
 # Fonts and icons for now
 sudo apt install -y fonts-firacode fonts-liberation2 fonts-ubuntu papirus-icon-theme fonts-cascadia-code
+sudo apt install -y fonts-firacode fonts-liberation2 papirus-icon-theme fonts-cascadia-code
 
 # Openbox packages
 sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage-qt menu picom  qt5-style-plugins rofi scrot tint2 xfce4-power-manager 
