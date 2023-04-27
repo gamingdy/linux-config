@@ -24,6 +24,7 @@ sudo apt install -y pcmanfm
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
 sudo apt install -y terminator
+sudo apt install -y yakuake terminator
 
 # Sound packages
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
