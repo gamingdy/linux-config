@@ -92,6 +92,11 @@ cd .themes/
 tar --xz -xf Nordic-darker.tar.xz
 rm Nordic-darker.tar.xz
 cp -r . ~/.themes
+
+# Icons theme
+mkdir -p  ~/.local/share/icons
+cd ../.icons
+cp -r * ~/.local/share/icons
 ########################################################
 # End of script for default config
 #
