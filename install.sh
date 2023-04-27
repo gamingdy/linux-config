@@ -4,43 +4,46 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
+printf "\e[1;32mInstalling xorg server.\e[0m\n"
 sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
 
 # PACKAGE INCLUDES build-essential.
+printf "\e[1;32mInstalling build essential.\e[0m\n"
 sudo apt install -y build-essential
 
-# Microcode for Intel/AMD 
-# sudo apt install -y amd64-microcode
-sudo apt install -y intel-microcode 
-
 # Network File Tools/System Events
+printf "\e[1;32mInstalling network tools.\e[0m\n"
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends
 
 sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
 
 # File Manager (eg. pcmanfm,krusader,thunar)
+printf "\e[1;32mInstalling filemanager.\e[0m\n"
 sudo apt install -y pcmanfm
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
-sudo apt install -y terminator
+printf "\e[1;32mInstalling terminal.\e[0m\n"
 sudo apt install -y yakuake terminator
 
 # Sound packages
+printf "\e[1;32mInstalling sound manager.\e[0m\n"
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/HTOP
-sudo apt install -y neofetch htop
+printf "\e[1;32mInstalling neofetch and bpytop.\e[0m\n"
 sudo apt install -y neofetch bpytop
 
 # Network Manager
+printf "\e[1;32mInstalling Network manager.\e[0m\n"
 sudo apt install -y network-manager network-manager-gnome 
 
 # Installation for Appearance management
+printf "\e[1;32mInstalling lxappearance.\e[0m\n"
 sudo apt install -y lxappearance 
 
 # Browser Installation (eg. chromium)
-sudo apt install -y firefox-esr 
+printf "\e[1;32mInstalling browser.\e[0m\n"
 # if you want firefox
 # sudo apt install -y firefox-esr 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -49,56 +52,67 @@ sudo rm ./google-chrome-stable_current_amd64.deb
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
-# sudo apt install -y nitrogen 
+printf "\e[1;32mInstalling background manager.\e[0m\n"
 sudo apt install -y nitrogen 
 #sudo apt install -y feh
  
 # Fonts and icons for now
-sudo apt install -y fonts-firacode fonts-liberation2 fonts-ubuntu papirus-icon-theme fonts-cascadia-code
+printf "\e[1;32mInstalling font.\e[0m\n"
 sudo apt install -y fonts-firacode fonts-liberation2 papirus-icon-theme fonts-cascadia-code
 
 # Openbox packages
+printf "\e[1;32mInstalling Openbox.\e[0m\n"
 sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage-qt menu picom  qt5-style-plugins rofi scrot tint2 xfce4-power-manager 
 
 # LXDM login manager
+printf "\e[1;32mInstalling lxdm.\e[0m\n"
 sudo apt install -y lxdm
 sudo systemctl enable lxdm
 
 # Text editor
+printf "\e[1;32mInstalling text editor.\e[0m\n"
 sudo apt install -y geany vim
 
 # Calendar
+printf "\e[1;32mInstalling Calendar.\e[0m\n"
 sudo apt install -y gsimplecal
 
 # archiver
+printf "\e[1;32mInstalling Archiver.\e[0m\n"
 sudo apt install -y xarchiver
 
 # pip
+printf "\e[1;32mInstalling pip for python.\e[0m\n"
 sudo apt install -y python3-pip
 
 # Configuration Setup
-mkdir -p ~/.config/openbox
+printf "\e[1;32mMoving config folder to ~/.config .\e[0m\n"
 mkdir -p ~/.config
 cp -rv .config/* ~/.config
 #mkdir -p ~/.config/openbox
 #cp -a /etc/xdg/openbox/ ~/.config/
 
 # Wallpaper
+printf "\e[1;32mMoving wallpapers  to ~/wallpapers .\e[0m\n"
 mkdir -p ~/wallpapers
 cp wallpapers/* ~/wallpapers
 
 # lXDM Theme
+printf "\e[1;32mConfigure lxdm theme.\e[0m\n"
 sudo cp -r deb-theme/ /usr/share/lxdm/themes
 sudo cp lxdm.conf /etc/lxdm/lxdm.conf
 
 # Theme
+printf "\e[1;32mSetting Nordic theme.\e[0m\n"
 sudo apt install -y xz-utils
 cd .themes/
 tar --xz -xf Nordic-darker.tar.xz
 rm Nordic-darker.tar.xz
 cp -r . ~/.themes
 
+
 # Icons theme
+printf "\e[1;32mSetting Breeze icon theme.\e[0m\n"
 mkdir -p  ~/.local/share/icons
 cd ../.icons
 cp -r * ~/.local/share/icons
