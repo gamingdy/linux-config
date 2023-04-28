@@ -22,3 +22,6 @@ nm-applet &
 
 # terminal
 yakuake &
+
+# Clipboard
+copyq &
