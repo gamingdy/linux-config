@@ -127,7 +127,7 @@ cd ../../
 
 # Rofi font
 mkdir -p  ~/.local/share/fonts
-cp -rf .config/rofi/fonts/* ~/.local/share/fonts
+cp -rvf .config/rofi/fonts/* ~/.local/share/fonts
 fc-cache
 
 # rofi applet screenshot
@@ -150,21 +150,17 @@ cp -v wallpapers/* ~/wallpapers
 
 # lXDM Theme
 printf "\e[1;32mConfigure lxdm theme.\e[0m\n"
-sudo cp -r deb-theme/ /usr/share/lxdm/themes
-sudo cp lxdm.conf /etc/lxdm/lxdm.conf
+sudo cp -vr deb-theme/ /usr/share/lxdm/themes
+sudo cp -v lxdm.conf /etc/lxdm/lxdm.conf
 
 # Theme
 printf "\e[1;32mSetting Nordic theme.\e[0m\n"
-sudo apt install -y xz-utils
 cd .themes/
 tar -xf Nordic-darker.tar.xz
 rm Nordic-darker.tar.xz
-cp -r . ~/.themes
+cp -rv . ~/.themes
 
 copyq importData copyq.data
-# Icons theme
-printf "\e[1;32mSetting Breeze icon theme.\e[0m\n"
-mkdir -p  ~/.local/share/icons
 ########################################################
 # End of script for default config
 #
