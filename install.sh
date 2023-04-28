@@ -133,6 +133,9 @@ fc-cache
 # rofi applet screenshot
 sudo apt install -y maim viewnior xclip
 
+# rofi config
+sudo chmod +x .config/rofi/applets/bin/*
+
 # Configuration Setup
 printf "\e[1;32mMoving config folder to ~/.config .\e[0m\n"
 mkdir -p ~/.config
