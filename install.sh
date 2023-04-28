@@ -130,6 +130,9 @@ mkdir -p  ~/.local/share/fonts
 cp -rf .config/rofi/fonts/* ~/.local/share/fonts
 fc-cache
 
+# rofi applet screenshot
+sudo apt install -y maim viewnior xclip
+
 # Configuration Setup
 printf "\e[1;32mMoving config folder to ~/.config .\e[0m\n"
 mkdir -p ~/.config
