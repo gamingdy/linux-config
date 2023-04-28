@@ -64,6 +64,11 @@ sudo apt install -y fonts-firacode fonts-liberation2 papirus-icon-theme fonts-ca
 printf "\e[1;32mInstalling Openbox.\e[0m\n"
 sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage-qt menu picom  qt5-style-plugins scrot tint2 xfce4-power-manager 
 
+
+# Clipboard , emoji font
+printf "\e[1;32mInstalling Cliboard and emoji font.\e[0m\n"
+sudo apt install -y copyq xdotool fonts-noto-color-emoji
+
 # LXDM login manager
 printf "\e[1;32mInstalling lxdm.\e[0m\n"
 sudo apt install -y lxdm
@@ -104,6 +109,21 @@ ninja -C build
 sudo ninja -C build install
 cd ..
 sudo rm -r rofi-1.7.4 
+
+
+# Rofi emoji
+printf "\e[1;32mInstalling Rofi-emoji.\e[0m\n"
+git clone https://github.com/gamingdy/rofi-emoji.git
+sudo apt install -y rofi-dev autoconf automake libtool-bin libtool
+cd rofi-emoji
+autoreconf -i
+autoreconf -i
+mkdir build
+cd build/
+../configure
+make
+sudo make install
+cd ../../
 
 # Configuration Setup
 printf "\e[1;32mMoving config folder to ~/.config .\e[0m\n"
