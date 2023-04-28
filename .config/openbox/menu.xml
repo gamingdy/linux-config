@@ -44,7 +44,6 @@
                 <execute>google-chrome</execute>
             </action> </item>
         </menu>
-        
         <menu id="39" label="Other">
             <item label="File Manager PCManFM"> <action name="Execute">
                 <execute>pcmanfm</execute>
@@ -55,7 +54,6 @@
         </menu>
         <menu id="19" label="Shells">
             
-           
             <item label="Terminator"> <action name="Execute">
                 <execute>terminator</execute>
             </action> </item>
