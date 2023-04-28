@@ -146,7 +146,7 @@ sudo cp lxdm.conf /etc/lxdm/lxdm.conf
 printf "\e[1;32mSetting Nordic theme.\e[0m\n"
 sudo apt install -y xz-utils
 cd .themes/
-tar --xz -xf Nordic-darker.tar.xz
+tar -xf Nordic-darker.tar.xz
 rm Nordic-darker.tar.xz
 cp -r . ~/.themes
 
@@ -154,8 +154,6 @@ cp -r . ~/.themes
 # Icons theme
 printf "\e[1;32mSetting Breeze icon theme.\e[0m\n"
 mkdir -p  ~/.local/share/icons
-cd ../.icons
-cp -r * ~/.local/share/icons
 ########################################################
 # End of script for default config
 #
