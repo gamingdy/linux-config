@@ -347,12 +347,8 @@
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
-      <action name="NextWindow">
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
+      <action name="Execute">
+        <command>rofi -show window</command>
       </action>
     </keybind>
     <keybind key="A-S-Tab">
@@ -406,7 +402,11 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    
+    <keybind key="W-semicolon">
+      <action name="Execute">
+        <command>rofi -modi emoji -show emoji -emoji-format '{emoji}{name}'</command>
+      </action>
+    </keybind>
     
     <keybind key="W-space">
       <action name="Execute">
