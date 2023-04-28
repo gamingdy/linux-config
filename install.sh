@@ -62,7 +62,7 @@ sudo apt install -y fonts-firacode fonts-liberation2 papirus-icon-theme fonts-ca
 
 # Openbox packages
 printf "\e[1;32mInstalling Openbox.\e[0m\n"
-sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage-qt menu picom  qt5-style-plugins rofi scrot tint2 xfce4-power-manager 
+sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage-qt menu picom  qt5-style-plugins scrot tint2 xfce4-power-manager 
 
 # LXDM login manager
 printf "\e[1;32mInstalling lxdm.\e[0m\n"
@@ -84,6 +84,26 @@ sudo apt install -y xarchiver
 # pip
 printf "\e[1;32mInstalling pip for python.\e[0m\n"
 sudo apt install -y python3-pip
+
+
+# rofi installation
+printf "\e[1;32mInstalling Rofi.\e[0m\n"
+sudo apt install -y bison flex libxcb-util-dev libxcb-xkb-dev libxkbcommon-x11-dev libxcb-ewmh-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-cursor-dev libxcb-randr0-dev libcogl-pango-dev libstartup-notification0-dev check
+sudo apt install -y meson cmake
+wget https://github.com/davatorium/rofi/releases/download/1.7.4/rofi-1.7.4.tar.gz
+tar --gz -xf rofi-1.7.4.tar.gz 
+sudo rm rofi-1.7.4.tar.gz  
+cd rofi-1.7.4 
+mkdir build && cd build
+../configure
+make
+sudo make install
+cd ..
+meson setup build
+ninja -C build
+sudo ninja -C build install
+cd ..
+sudo rm -r rofi-1.7.4 
 
 # Configuration Setup
 printf "\e[1;32mMoving config folder to ~/.config .\e[0m\n"
