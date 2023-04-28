@@ -146,7 +146,7 @@ cp -rv .config/* ~/.config
 # Wallpaper
 printf "\e[1;32mMoving wallpapers  to ~/wallpapers .\e[0m\n"
 mkdir -p ~/wallpapers
-cp wallpapers/* ~/wallpapers
+cp -v wallpapers/* ~/wallpapers
 
 # lXDM Theme
 printf "\e[1;32mConfigure lxdm theme.\e[0m\n"
@@ -161,7 +161,7 @@ tar -xf Nordic-darker.tar.xz
 rm Nordic-darker.tar.xz
 cp -r . ~/.themes
 
-
+copyq importData copyq.data
 # Icons theme
 printf "\e[1;32mSetting Breeze icon theme.\e[0m\n"
 mkdir -p  ~/.local/share/icons
