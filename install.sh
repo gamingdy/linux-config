@@ -153,6 +153,13 @@ printf "\e[1;32mConfigure lxdm theme.\e[0m\n"
 sudo cp -vr deb-theme/ /usr/share/lxdm/themes
 sudo cp -v lxdm.conf /etc/lxdm/lxdm.conf
 
+# alacritty
+# repo url of debian build
+# https://github.com/barnumbirr/alacritty-debian/tree/master
+printf "\e[1;32mInstalling alacritty.\e[0m\n"
+wget https://github.com/barnumbirr/alacritty-debian/releases/download/v0.12.0-1/alacritty_0.12.0_amd64_bullseye.deb
+sudo apt install -y ./alacritty_0.12.0_amd64_bullseye.deb
+
 # Theme
 printf "\e[1;32mSetting Nordic theme.\e[0m\n"
 cd .themes/
