@@ -15,7 +15,7 @@ nitrogen --set-zoom-fill --random ~/wallpapers/
 tint2 &
 
 # volume
-(sleep 10; volumeicon) &
+volumeicon &
 
 # network manager
 nm-applet &
