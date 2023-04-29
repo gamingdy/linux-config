@@ -20,8 +20,5 @@ volumeicon &
 # network manager
 nm-applet &
 
-# terminal
-yakuake &
-
 # Clipboard
 copyq &

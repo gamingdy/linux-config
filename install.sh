@@ -24,7 +24,7 @@ sudo apt install -y pcmanfm
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
 printf "\e[1;32mInstalling terminal.\e[0m\n"
-sudo apt install -y yakuake terminator
+sudo apt install -y terminator
 
 # Sound packages
 printf "\e[1;32mInstalling sound manager.\e[0m\n"
