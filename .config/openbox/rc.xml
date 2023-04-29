@@ -415,7 +415,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>yakuake</command>
+        <command>alacritty</command>
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
