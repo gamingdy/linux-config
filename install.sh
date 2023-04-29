@@ -160,6 +160,18 @@ printf "\e[1;32mInstalling alacritty.\e[0m\n"
 wget https://github.com/barnumbirr/alacritty-debian/releases/download/v0.12.0-1/alacritty_0.12.0_amd64_bullseye.deb
 sudo apt install -y ./alacritty_0.12.0_amd64_bullseye.deb
 
+
+# zsh
+printf "\e[1;32mInstalling zsh.\e[0m\n"
+sudo apt install -y zsh
+
+printf "\e[1;32mSetting up zsh.\e[0m\n"
+if command -v curl >/dev/null 2>&1; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+else
+  sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+fi
+
 # Theme
 printf "\e[1;32mSetting Nordic theme.\e[0m\n"
 cd .themes/
