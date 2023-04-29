@@ -160,12 +160,12 @@ tar -xf Nordic-darker.tar.xz
 rm Nordic-darker.tar.xz
 cp -rv . ~/.themes
 
-copyq importData copyq.data
+
 ########################################################
 # End of script for default config
 #
 
 
-sudo apt autoremove
+sudo apt autoremove -y
 
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"

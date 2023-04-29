@@ -20,3 +20,4 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 apt update
 
 apt install sublime-text -y
+copyq importData copyq.data
