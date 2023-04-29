@@ -109,7 +109,7 @@ ninja -C build
 sudo ninja -C build install
 cd ..
 sudo rm -r rofi-1.7.4 
-
+sudo apt remove -y bison flex check meson cmake
 
 # Rofi emoji
 printf "\e[1;32mInstalling Rofi-emoji.\e[0m\n"
