@@ -12,7 +12,7 @@ nitrogen --set-zoom-fill --random ~/wallpapers/
 
 # panel, taskbar, systray, clock, battery
 
-tint2 &
+~/.config/polybar/launch.sh &
 
 # volume
 volumeicon &

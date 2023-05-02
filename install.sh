@@ -62,7 +62,7 @@ sudo apt install -y fonts-firacode fonts-liberation2 papirus-icon-theme fonts-ca
 
 # Openbox packages
 printf "\e[1;32mInstalling Openbox.\e[0m\n"
-sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage-qt menu picom  qt5-style-plugins scrot tint2 xfce4-power-manager 
+sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage-qt menu picom  qt5-style-plugins scrot polybar xfce4-power-manager 
 
 
 # Clipboard , emoji font
@@ -135,6 +135,11 @@ sudo apt install -y maim viewnior xclip
 
 # rofi config
 sudo chmod +x .config/rofi/applets/bin/*
+
+# polyar config
+
+sudo chmod +x .config/polybar/launch.sh
+
 
 # Configuration Setup
 printf "\e[1;32mMoving config folder to ~/.config .\e[0m\n"
