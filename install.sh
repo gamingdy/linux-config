@@ -2,6 +2,7 @@
 
 # Default packages are for the configuration and corresponding .config folders
 # Install packages after installing base Debian with no GUI
+sudo apt update
 
 # xorg display server installation
 printf "\e[1;32mInstalling xorg server.\e[0m\n"
@@ -30,7 +31,7 @@ sudo apt install -y terminator
 printf "\e[1;32mInstalling sound manager.\e[0m\n"
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
-# Neofetch/HTOP
+# Neofetch/bpytop
 printf "\e[1;32mInstalling neofetch and bpytop.\e[0m\n"
 sudo apt install -y neofetch bpytop
 
@@ -46,9 +47,9 @@ sudo apt install -y lxappearance
 printf "\e[1;32mInstalling browser.\e[0m\n"
 # if you want firefox
 # sudo apt install -y firefox-esr 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install -y ./google-chrome-stable_current_amd64.deb
-sudo rm ./google-chrome-stable_current_amd64.deb
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo apt install -y ./google-chrome-stable_current_amd64.deb
+#sudo rm ./google-chrome-stable_current_amd64.deb
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
@@ -188,7 +189,7 @@ cp -rv . ~/.themes
 ########################################################
 # End of script for default config
 #
-
+sudo apt upgrade -y
 
 sudo apt autoremove -y
 
