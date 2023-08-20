@@ -418,6 +418,11 @@
         <command>alacritty</command>
       </action>
     </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+        <command>kill -9 -1</command>
+      </action>
+    </keybind>
     <!-- Launch scrot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
