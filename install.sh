@@ -70,10 +70,19 @@ sudo apt install -y openbox dunst dbus-x11 hsetroot i3lock libnotify-bin lximage
 printf "\e[1;32mInstalling Cliboard and emoji font.\e[0m\n"
 sudo apt install -y copyq xdotool fonts-noto-color-emoji
 
-# LXDM login manager
-printf "\e[1;32mInstalling lxdm.\e[0m\n"
-sudo apt install -y lxdm
-sudo systemctl enable lxdm
+# SDDM login manager
+printf "\e[1;32mInstalling sddm.\e[0m\n"
+sudo apt install --no-install-recommends -y sddm qml-module-qtquick-layouts qml-module-qtgraphicaleffects qml-module-qtquick-controls2 libqt5svg5
+sudo systemctl enable sddm
+
+# SDDM Theme
+printf "\e[1;32mConfigure sddm theme.\e[0m\n"
+sudo mkdir /etc/sddm.conf.d
+sudo mv login.conf /etc/sddm.conf.d/
+
+sudo mkdir ‑p /usr/share/sddm/themes
+sudo tar -xzvf login-theme/sugar-candy.tar.gz -C /usr/share/sddm/themes
+
 
 # Text editor
 printf "\e[1;32mInstalling text editor.\e[0m\n"
@@ -171,10 +180,6 @@ printf "\e[1;32mMoving wallpapers  to ~/wallpapers .\e[0m\n"
 mkdir -p ~/wallpapers
 cp -v wallpapers/* ~/wallpapers
 
-# lXDM Theme
-printf "\e[1;32mConfigure lxdm theme.\e[0m\n"
-sudo cp -vr deb-theme/ /usr/share/lxdm/themes
-sudo cp -v lxdm.conf /etc/lxdm/lxdm.conf
 
 # alacritty
 # repo url of debian build
