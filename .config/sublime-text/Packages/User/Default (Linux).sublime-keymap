@@ -1,0 +1,7 @@
+[
+	{
+        "keys": ["ctrl+shift+n"], "command": "terminus_open", "args": {
+            "cwd": "${file_path:${folder}}"
+        }
+    },
+]
