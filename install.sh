@@ -86,6 +86,9 @@ sudo apt install -y xarchiver
 printf "\e[1;32mInstalling pip for python.\e[0m\n"
 sudo apt install -y python3-pip
 
+#venv
+printf "\e[1;32mInstalling venv for python.\e[0m\n"
+sudo apt install -y python3-venv
 
 # rofi installation
 printf "\e[1;32mInstalling Rofi.\e[0m\n"
@@ -173,9 +176,9 @@ rm Nordic-darker.tar.xz
 cp -rv . ~/.themes
 
 
-########################################################
-# End of script for default config
-#
+####################################
+# End of script for default config #
+####################################
 sudo apt upgrade -y
 
 sudo apt autoremove -y
