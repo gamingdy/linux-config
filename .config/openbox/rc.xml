@@ -397,9 +397,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>pcmanfm</name>
+          <name>nautilus</name>
         </startupnotify>
-        <command>pcmanfm</command>
+        <command>nautilus</command>
       </action>
     </keybind>
     <keybind key="W-semicolon">
