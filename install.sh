@@ -19,21 +19,14 @@ sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backen
 sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
 
-# File Manager (eg. pcmanfm,krusader,thunar)
-printf "\e[1;32mInstalling filemanager.\e[0m\n"
-sudo apt install -y pcmanfm
-
-# Terminal (eg. terminator,kitty,xfce4-terminal)
-printf "\e[1;32mInstalling terminal.\e[0m\n"
-sudo apt install -y terminator
 
 # Sound packages
 printf "\e[1;32mInstalling sound manager.\e[0m\n"
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/bpytop
-printf "\e[1;32mInstalling neofetch and bpytop.\e[0m\n"
-sudo apt install -y neofetch bpytop
+printf "\e[1;32mInstalling neofetch, bpytop and htop.\e[0m\n"
+sudo apt install -y neofetch bpytop htop
 
 # Network Manager
 printf "\e[1;32mInstalling Network manager.\e[0m\n"
@@ -43,13 +36,6 @@ sudo apt install -y network-manager network-manager-gnome
 printf "\e[1;32mInstalling lxappearance.\e[0m\n"
 sudo apt install -y lxappearance 
 
-# Browser Installation (eg. chromium)
-printf "\e[1;32mInstalling browser.\e[0m\n"
-# if you want firefox
-# sudo apt install -y firefox-esr 
-#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#sudo apt install -y ./google-chrome-stable_current_amd64.deb
-#sudo rm ./google-chrome-stable_current_amd64.deb
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
@@ -136,22 +122,6 @@ sudo make install
 cd ../../
 
 
-printf "\e[1;32mInstalling Sublime Text.\e[0m\n"
-# Ensure that apt can handle HTTPS sources:
-sudo apt install apt-transport-https gpg -y
-
-# Add Sublime Text repository signing key to verify downloaded packages:
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
-
-# Stable releases of Sublime Text:
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-
-# update apt list for sublime text and installing sublime text
-sudo apt update
-
-sudo apt install sublime-text -y
-
-
 # Rofi font
 mkdir -p  ~/.local/share/fonts
 cp -rvf .config/rofi/fonts/* ~/.local/share/fonts
@@ -167,6 +137,8 @@ sudo chmod +x .config/rofi/applets/bin/*
 
 sudo chmod +x .config/polybar/launch.sh
 
+printf "\e[1;32mInstalling custom software .\e[0m\n"
+bash script/software.sh
 
 # Configuration Setup
 printf "\e[1;32mMoving config folder to ~/.config .\e[0m\n"
@@ -180,13 +152,6 @@ printf "\e[1;32mMoving wallpapers  to ~/wallpapers .\e[0m\n"
 mkdir -p ~/wallpapers
 cp -v wallpapers/* ~/wallpapers
 
-
-# alacritty
-# repo url of debian build
-# https://github.com/barnumbirr/alacritty-debian/tree/master
-printf "\e[1;32mInstalling alacritty.\e[0m\n"
-wget https://github.com/barnumbirr/alacritty-debian/releases/download/v0.12.0-1/alacritty_0.12.0_amd64_bullseye.deb
-sudo apt install -y ./alacritty_0.12.0_amd64_bullseye.deb
 
 
 # zsh
