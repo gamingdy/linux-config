@@ -42,5 +42,9 @@ sudo apt install sublime-text -y
 #sudo rm ./discord.deb
 
 
-
+# Termius installation
+printf "\e[1;32mInstalling Termius.\e[0m\n"
+wget --show-progress -O  termius.deb https://autoupdate.termius.com/linux/Termius.deb
+sudo apt install -y ./termius.deb
+sudo rm ./termius.deb
 
