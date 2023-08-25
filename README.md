@@ -26,6 +26,16 @@ $ cd linux-config
 $ bash install.sh
 ```
 
+## After Installation
+
+It is recommended to run alacritty to complete zsh configuration
+
+Once the configuration is complete, on your terminal do
+```bash
+$ cd linux-config
+$ copyq importData copyq.data
+```
+
 ## Shortcuts
 
 Here's a quick reminder of the different keyboard shortcuts available
