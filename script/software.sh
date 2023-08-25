@@ -1,5 +1,14 @@
 #!/bin/bash
 
+
+# Calendar
+printf "\e[1;32mInstalling Calendar.\e[0m\n"
+sudo apt install -y gsimplecal
+
+# Text editor
+printf "\e[1;32mInstalling text editor.\e[0m\n"
+sudo apt install -y geany vim
+
 # File Manager (eg. pcmanfm,krusader,thunar)
 
 printf "\e[1;32mInstalling filemanager.\e[0m\n"

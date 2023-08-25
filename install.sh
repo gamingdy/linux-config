@@ -69,15 +69,6 @@ sudo mv login.conf /etc/sddm.conf.d/
 sudo mkdir ‑p /usr/share/sddm/themes
 sudo tar -xzvf login-theme/sugar-candy.tar.gz -C /usr/share/sddm/themes
 
-
-# Text editor
-printf "\e[1;32mInstalling text editor.\e[0m\n"
-sudo apt install -y geany vim
-
-# Calendar
-printf "\e[1;32mInstalling Calendar.\e[0m\n"
-sudo apt install -y gsimplecal
-
 # archiver
 printf "\e[1;32mInstalling Archiver.\e[0m\n"
 sudo apt install -y xarchiver
