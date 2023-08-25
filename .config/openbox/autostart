@@ -1,0 +1,24 @@
+#
+# These things are run when an Openbox X Session is started.
+#
+# compositor
+picom &
+
+# notification
+dunst &
+
+# wallpaper
+nitrogen --set-zoom-fill --random ~/wallpapers/
+
+# panel, taskbar, systray, clock, battery
+
+~/.config/polybar/launch.sh &
+
+# volume
+volumeicon &
+
+# network manager
+nm-applet &
+
+# Clipboard
+copyq &
