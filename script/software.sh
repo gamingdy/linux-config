@@ -9,7 +9,7 @@ sudo apt install -y gsimplecal
 printf "\e[1;32mInstalling text editor.\e[0m\n"
 sudo apt install -y geany vim
 
-# File Manager (eg. pcmanfm,krusader,thunar)
+# File Manager
 
 printf "\e[1;32mInstalling filemanager.\e[0m\n"
 sudo apt install -y nautilus
@@ -24,12 +24,12 @@ sudo apt install -y ./alacritty_0.12.0_amd64_bullseye.deb
 rm alacritty_0.12.0_amd64_bullseye.deb
 
 # Browser Installation (eg. chromium)
-#printf "\e[1;32mInstalling browser.\e[0m\n"
+printf "\e[1;32mInstalling browser.\e[0m\n"
 # if you want firefox
 # sudo apt install -y firefox-esr
-#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#sudo apt install -y ./google-chrome-stable_current_amd64.deb
-#sudo rm ./google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./google-chrome-stable_current_amd64.deb
+sudo rm ./google-chrome-stable_current_amd64.deb
 
 
 printf "\e[1;32mInstalling Sublime Text.\e[0m\n"
