@@ -84,3 +84,13 @@ printf "\e[1;32mInstalling discord.\e[0m\n"
 wget --show-progress -O discord.deb https://dl.discordapp.net/apps/linux/0.0.29/discord-0.0.29.deb
 sudo apt install -y ./discord.deb
 sudo rm ./discord.deb
+
+# Libreoffice Installation
+printf "\e[1;32mInstalling Libre Office.\e[0m\n"
+sudo apt install libreoffice -y
+
+# VSCode Installation
+printf "\e[1;32mInstalling VSCode.\e[0m\n"
+wget --show-progress -O vscode.deb https://az764295.vo.msecnd.net/stable/8b617bd08fd9e3fc94d14adb8d358b56e3f72314/code_1.82.0-1694039253_amd64.deb
+sudo apt install -y vscode.deb
+sudo rm ./vscode.deb
