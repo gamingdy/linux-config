@@ -47,13 +47,6 @@ sudo apt update
 
 sudo apt install sublime-text -y
 
-# Discord Installation
-printf "\e[1;32mInstalling discord.\e[0m\n"
-wget --show-progress -O discord.deb https://discord.com/api/download?platform=linux&format=deb
-sudo apt install -y ./discord.deb
-sudo rm ./discord.deb
-
-
 # Termius installation
 printf "\e[1;32mInstalling Termius.\e[0m\n"
 wget --show-progress -O  termius.deb https://autoupdate.termius.com/linux/Termius.deb
@@ -85,3 +78,9 @@ sudo apt install -y libfuse2 libxi6 libxrender1 libxtst6 mesa-utils libfontconfi
 wget --show-progress -O  jetbrains-toolbox.tar.gz https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.0.2.16660.tar.gz
 tar --gz -xf jetbrains-toolbox.tar.gz
 rm jetbrains-toolbox.tar.gz
+
+# Discord Installation
+printf "\e[1;32mInstalling discord.\e[0m\n"
+wget --show-progress -O discord.deb https://dl.discordapp.net/apps/linux/0.0.29/discord-0.0.29.deb
+sudo apt install -y ./discord.deb
+sudo rm ./discord.deb
