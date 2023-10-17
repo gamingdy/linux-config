@@ -9,21 +9,35 @@ Debian must be installed on your system without a graphical user interface
 First we'll install sudo and git
 
 1. Login as root
+
 ```bash
 $ apt update
 $ apt install -y sudo git
 ```
 
 2. Add a user to the sudo group
+
 ```bash
 $ usermod -aG sudo username
 ```
 
 3. Log out and log in with your user account. Once log in
+
 ```bash
 $ git clone https://github.com/gamingdy/linux-config.git
 $ cd linux-config
 $ bash install.sh
+```
+
+## After Installation
+
+It is recommended to run alacritty to complete zsh configuration
+
+Once the configuration is complete, on your terminal do
+
+```bash
+$ cd linux-config
+$ copyq importData copyq.data
 ```
 
 ## Shortcuts
@@ -31,7 +45,7 @@ $ bash install.sh
 Here's a quick reminder of the different keyboard shortcuts available
 
 | Shortcuts        | Action                                        |
-|------------------|-----------------------------------------------|
+| ---------------- | --------------------------------------------- |
 | ctrl+alt+right   | go to next desktop                            |
 | ctrl+alt+left    | go to previous desktop                        |
 | shift+alt+left   | send active window to previous desktop        |
