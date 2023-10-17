@@ -94,3 +94,9 @@ printf "\e[1;32mInstalling VSCode.\e[0m\n"
 wget --show-progress -O vscode.deb https://az764295.vo.msecnd.net/stable/8b617bd08fd9e3fc94d14adb8d358b56e3f72314/code_1.82.0-1694039253_amd64.deb
 sudo apt install -y ./vscode.deb
 sudo rm ./vscode.deb
+
+#Bitwarden Installation
+printf "\e[1;32mInstalling Bitwarden.\e[0m\n"
+wget "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=deb" -O bitwarden.deb
+sudo apt install -y ./bitwarden.deb
+sudo rm ./bitwarden.deb
