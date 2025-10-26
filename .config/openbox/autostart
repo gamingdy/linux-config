@@ -1,24 +1,40 @@
-#
-# These things are run when an Openbox X Session is started.
-#
+#!/usr/bin/env bash
+
+CONF_PATH=$HOME/.config/openbox
+SRC_PATH=$CONF_PATH/src
+
+EWW_PATH=$SRC_PATH/eww
+POLYBAR_PATH=$SRC_PATH/polybar
+
 # compositor
-picom &
+picom --config=$CONF_PATH/picom.conf -b &
+
+run_polybar () {
+  $HOME/.config/polybar/launch.sh
+}
+
+run_eww () {
+  eww -c $EWW_PATH daemon
+  $EWW_PATH/scripts/redshift restore
+}
+
+xrdb merge $HOME/.Xresources
+nitrogen --set-zoom-fill --random ~/wallpapers/
+
+run_polybar
+run_eww
 
 # notification
 dunst &
 
-# wallpaper
-nitrogen --set-zoom-fill --random ~/wallpapers/
+# network manager
+nm-applet &
 
-# panel, taskbar, systray, clock, battery
 
-~/.config/polybar/launch.sh &
+# Clipboard
+copyq &
 
 # volume
 volumeicon &
 
-# network manager
-nm-applet &
 
-# Clipboard
-copyq &
